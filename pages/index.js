@@ -12,9 +12,12 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>…</section>
+      <main className={utilStyles.main}>
+      <section className={utilStyles.headingMd}>
+          <h1>どうも,青森大学4年の佐々木陽平です。</h1>
+       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <h2 className={utilStyles.headingLg}>----Blog----</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
@@ -29,6 +32,7 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
+      </main>
     </Layout>
   )
 }
