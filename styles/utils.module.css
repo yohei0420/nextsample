@@ -54,3 +54,10 @@
   .lightText {
     color: #999;
   }
+
+  @media (max-width: 600px) {
+    .headingMd {
+      font-size: 1.0rem;
+      line-height: 1.5;
+    }
+  }

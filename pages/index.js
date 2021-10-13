@@ -31,7 +31,14 @@ export default function Home({ allPostsData }) {
           </li>
           ))}
         </ul>
+        
       </section>
+      <h2>----history----</h2>
+      
+      <Link href="/history/history">history</Link>
+      <br/>
+      <Link href="/history/second">second</Link>
+     
       </main>
     </Layout>
   )
