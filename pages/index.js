@@ -4,17 +4,20 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import Button from "react-bootstrap/Button";
+import { Link as Scroll } from 'react-scroll';
 
-
-export default function Home({ allPostsData }) {
+export default  function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <main className={utilStyles.main}>
+      <section id="concept">
       <section className={utilStyles.headingMd}>
           <h1>どうも,青森大学4年の佐々木陽平です。</h1>
+       </section>
        </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>----Blog----</h2>
@@ -38,11 +41,18 @@ export default function Home({ allPostsData }) {
       <Link href="/history/history">history</Link>
       <br/>
       <Link href="/history/second">second</Link>
-     
+      <nav>
+        <Scroll to="concept"><Button>TOP</Button></Scroll>
+      </nav>
+      
       </main>
     </Layout>
-  )
+    
+  ) 
+
 }
+
+
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -52,3 +62,4 @@ export async function getStaticProps() {
     }
   }
 }
+
