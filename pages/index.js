@@ -5,6 +5,9 @@ import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
 import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 import { Link as Scroll } from 'react-scroll';
 
 export default  function Home({ allPostsData }) {
@@ -13,6 +16,26 @@ export default  function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <header className="bg-dark">
+      <Container>
+    <Navbar expand="md" variant="dark">
+      <Navbar.Toggle aria-controls="navbarResponsive" />
+      <Navbar.Collapse id="navbarResponsive">
+        <Nav as="ul" className="ml-auto">
+        <Nav.Item as="li">
+            <Link href="/" className="nav-link" activeClassName="active"><a>Home</a></Link>
+          </Nav.Item>
+          <Nav.Item as="li">
+            <Link href="/sample" className="nav-link" activeClassName="active"><a>Sample</a></Link>
+          </Nav.Item>
+          <Nav.Item as="li">
+            <Link href="/blog" className="nav-link" activeClassName="active"><a>Blog</a></Link>
+          </Nav.Item>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  </Container> 
+  </header>
       <main className={utilStyles.main}>
       <section id="concept">
       <section className={utilStyles.headingMd}>
