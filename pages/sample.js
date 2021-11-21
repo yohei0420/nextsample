@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Link as Scroll } from 'react-scroll';
+import utilStyles from '../styles/utils.module.css'
 
 export default function History() {
     return (
@@ -13,11 +14,11 @@ export default function History() {
         <h2>h2</h2>
         <h3>h3</h3>
         <h4>h4</h4>
-  　
+  　<div className={utilStyles.scroll}>
     <nav>
         <Scroll to="concept">スクロール</Scroll>
       </nav>
-
+    </div>
 
         <h2>リストやってみるよー</h2>
         <ul>
